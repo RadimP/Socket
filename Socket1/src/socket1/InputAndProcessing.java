@@ -17,11 +17,11 @@ import java.util.Scanner;
  */
 public class InputAndProcessing {
 
-  //  CaesarCipher caesar;
-  //  Enigma enigma;
+    CaesarCipher caesar;
+    Enigma enigma;
     VigenereCipher vigenere;
-  //  SHA1 sha1;
-  //  RSACipher rsa;
+    SHA1 sha1;
+    RSACipher rsa;
     String[] args;
     ArrayList<String> input;
     /* static final String[] THECIPHER = {
@@ -33,9 +33,9 @@ public class InputAndProcessing {
      * Konstruktor bez vtsupních parametrů, který voláním jenodltivých metod
      * této třídy zpracovává vstup.
      */
-    InputAndProcessing() { if(Sifrovani.getArgs().length>0)
+   /* InputAndProcessing() { if(Sifrovani.getArgs().length>0)
     { this.getInputFromCmdline();} else {this.getInputFromConsole();}
-    }
+    }*/
 
     /**
      * Tato metoda zpracuje arg[0] z příkazového řádku (rozliší druh šifry) a
@@ -43,7 +43,7 @@ public class InputAndProcessing {
      * argumenty příkazového řádku a vytiskne výsledek (šifrovaný nebo
      * dešifrovaný text).
      */
-    public void getInputFromCmdline() {
+ /*   public void getInputFromCmdline() {
         this.args = Sifrovani.getArgs();
         if (this.args.length >= 4) {
             switch (args[0].toLowerCase()) {
@@ -81,7 +81,7 @@ public class InputAndProcessing {
                 System.out.println("Not enough arguments!");
             }
         }
-    }
+    }*/
 
     /**
      * Tato metoda na základě konkrétní třídy třídy načtené metodou
@@ -94,7 +94,7 @@ public class InputAndProcessing {
      * Přestože je jako vstupní třída definována rodičovská třída
      * CipherAlgorithm, metoda vnitřně pracuje s některým potomkem.
      */
-    public void processCMdArg3(CipherAlgorithm ca) {
+/*    public void processCMdArg3(CipherAlgorithm ca) {
         this.args = Sifrovani.getArgs();
         if (this.args.length >= 4) {
             switch (args[2].toLowerCase()) {
@@ -135,9 +135,9 @@ public class InputAndProcessing {
         } else {
             System.out.println("Not enough arguments!");
         }
-    }
+    }*/
 
-    public void getInputFromConsole() {
+  /*  public void getInputFromConsole() {
         this.input = new ArrayList<String>();
         Scanner sc = new Scanner(System.in);
         System.out.println("Jako první parametr zadejte druh šifry: enigma, caesar, vigenere, sha1, rsa.");
@@ -177,10 +177,10 @@ public class InputAndProcessing {
         } else {
             System.out.println("Not enough arguments!");
         }
-    }
+    }*/
 
 
-public void processInputFromConsole(CipherAlgorithm ca, ArrayList<String> input) {
+/*public void processInputFromConsole(CipherAlgorithm ca, ArrayList<String> input) {
         this.input = input;
         if (this.input.size() >= 4) {
             switch (input.get(2).toLowerCase()) {
@@ -213,5 +213,5 @@ public void processInputFromConsole(CipherAlgorithm ca, ArrayList<String> input)
         } else {
             System.out.println("Not enough arguments!");
         }
-    }
+    }*/
 }
